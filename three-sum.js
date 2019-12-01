@@ -1,5 +1,5 @@
 var threeSum = function(nums) {
-  nums.sort();
+  nums.sort((a, b) => a - b);
   const arr = [];
   for (let i = 0; i < nums.length - 2; i++) {
     for (let j = i + 1; i < nums.length; i++) {

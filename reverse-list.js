@@ -2,17 +2,14 @@
 // Output: 5 -> 4 -> 3 -> 2 -> 1 -> NULL
 
 var reverseList = function(head) {
-  if (!head) return head;
+  let pre = null;
 
-  let first = head;
-  let cur = head.next;
-
-  while (cur) {
-    head.next = cur.next;
-    cur.next = first;
-    first = cur;
-    cur = head.next;
+  while (head) {
+    const next = head.next;
+    head.next = pre;
+    pre = head;
+    head = next;
   }
 
-  return first;
+  return pre;
 };
