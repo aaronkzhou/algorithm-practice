@@ -6,7 +6,7 @@ function minimumTime(numOfSubFiles, files) {
   let val2 = 0;
 
   while (files.length > 1) {
-    files.sort(function(a, b) {
+    files.sort(function (a, b) {
       return b - a;
     });
     val1 = files.pop();

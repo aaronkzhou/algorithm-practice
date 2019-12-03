@@ -15,9 +15,6 @@ var addTwoNumbers = function (l1, l2) {
     list1Val = parseInt(list1.reverse.join(''))
     list2Val = parseInt(list2.reverse.join(''))
     let newValue = list1Val + list2Val
-    let newValueList = newValue.split('')
-
-
 };
 
 addTwoNumbers()
