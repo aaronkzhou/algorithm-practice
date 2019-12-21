@@ -11,7 +11,6 @@ node.next = new LinkedListNode(2)
 node.next.next = new LinkedListNode(3)
 
 while (node !== null) {
-    console.log(node.data)
     node = node.next
 }
 

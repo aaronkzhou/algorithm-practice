@@ -1,5 +1,6 @@
-var isPalindrome = function (x) {
-    return x.toString() === x.toString().split('').reverse().join('')
+var isPalindrome = function (phrase) {
+    let newPhrase = phrase.replace(/\s+/g, "").toLowerCase()
+    return newPhrase.toString() === newPhrase.toString().split('').reverse().join('')
 };
 
-console.log(isPalindrome('121'))
+console.log(isPalindrome('Never Even Or Odd'))

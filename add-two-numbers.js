@@ -38,10 +38,8 @@ function generateListNode(sumNodeArray) {
         const newNode = new ListNode(nodeVal)
         if (node.val === undefined) {
             node.val = nodeVal
-            console.log(node)
         } else {
             let current = node
-            console.log(current)
             while (current.next !== null) {
                 current = current.next
             }
