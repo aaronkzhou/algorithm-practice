@@ -17,7 +17,7 @@ console.log(arr); // [ 1, 3, 4, 7, 8, 34, 67 ]
 // ...
 // j:6  i: 0-0 --> [ 1, 3, 4, 7, 8, 34, 67 ]  move 0-0 to the last
 
-let selectionSort = function(array) {
+let selectionSort = function (array) {
   for (let i = 0; i < array.length; i++) {
     //set min to the current iteration of i
     let min = i;

@@ -1,17 +1,43 @@
-// debounce function that will wrap our event
 function debounce(fn, delay) {
-    // maintain a timer
     let timer = null;
-    // closure function that has access to timer
     return function () {
-        // get the scope and parameters of the function 
-        // via 'this' and 'arguments'
         let context = this;
         let args = arguments;
-        // if event is called, clear the timer and start over
         clearTimeout(timer);
         timer = setTimeout(function () {
             fn.apply(context, args);
         }, delay);
     }
 }
+
+function debounce(fn, delay) {
+    let timer = null;
+    return function () {
+        let context = this;
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            fn.apply(context, args);
+        }, delay);
+    }
+}
+
+// doubleClick
+
+function debounce(fn, delay) {
+    let timer = null
+    let count = 0
+
+    return function () {
+        let context = this;
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            count = count + 1
+            if (count === 1) fn.apply(context, args);
+            count = 0
+        }, delay);
+    }
+}
+
+const handleOnClick = debounce(doubleClickFn, 100)
